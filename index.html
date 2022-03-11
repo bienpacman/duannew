@@ -64,6 +64,7 @@
         <th>STT</th>
         <th>Name</th>
         <th>Age</th>
+        <th>Chức vụ</th>
 
     </tr>
     <tbody id="drawTable"></tbody>
@@ -196,12 +197,14 @@
 </footer>
 <!-- Footer -->
 <script>
-    let student1 = new Student(1, 'bien', 20)
-    let student2 = new Student(2, 'kiên', 21)
+    let student1 = new Student(1, 'Biên', 20 ,'Sinh viên')
+    let student2 = new Student(2, 'Kiên', 21 , 'Sinh viên')
+    let student3 = new Student(3, 'Thành', 18 ,'Sinh viên')
 
     let studentlist = []
     studentlist.push(student1);
     studentlist.push(student2);
+    studentlist.push(student3);
 
     function showList() {
         let drawTable = '';
@@ -210,6 +213,9 @@
             drawTable += `<tr><td>${studentlist[i].id}</td>
 <td>${studentlist[i].name}</td>
 <td>${studentlist[i].age}</td>
+<td>${studentlist[i].position}</td>
+
+
 </tr>`
 
         }
